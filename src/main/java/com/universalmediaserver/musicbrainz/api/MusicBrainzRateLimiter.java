@@ -24,7 +24,8 @@ import java.util.concurrent.atomic.AtomicInteger;
 /**
  * MusicBrainz rate limit is 1 request per second per IP.
  *
- * @see https://wiki.musicbrainz.org/MusicBrainz_API/Rate_Limiting
+ * More info on <a href="https://wiki.musicbrainz.org/MusicBrainz_API/Rate_Limiting">MusicBrainz wiki</a>
+ *
  * @author SurfaceS
  */
 public class MusicBrainzRateLimiter {
