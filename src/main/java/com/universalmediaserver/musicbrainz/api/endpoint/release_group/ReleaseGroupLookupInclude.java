@@ -24,7 +24,7 @@ package com.universalmediaserver.musicbrainz.api.endpoint.release_group;
 public enum ReleaseGroupLookupInclude {
 
 	ARTIST_CREDITS("artist-credits"),
-	RECORDING("releases"),
+	RELEASES("releases"),
 	RATINGS("ratings");
 
 	final String value;

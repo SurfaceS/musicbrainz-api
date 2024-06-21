@@ -40,7 +40,7 @@ public class ReleaseGroupLookupEndpointTest extends BaseTestClass {
 		ReleaseGroupSchema result = musicBrainzAPIClient.releaseGroup()
 				.lookupFor(RELEASE_GROUP_ID)
 				.include(ReleaseGroupLookupInclude.ARTIST_CREDITS)
-				.include(ReleaseGroupLookupInclude.RECORDING)
+				.include(ReleaseGroupLookupInclude.RELEASES)
 				.include(ReleaseGroupLookupInclude.RATINGS)
 				.getDetails();
 		assertParsedObject(result);
