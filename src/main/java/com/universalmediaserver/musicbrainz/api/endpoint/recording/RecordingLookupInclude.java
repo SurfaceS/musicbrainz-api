@@ -25,6 +25,8 @@ public enum RecordingLookupInclude {
 
 	ARTIST_CREDIT("artist-credits"),
 	RELEASES("releases"),
+	RELEASE_GROUPS("release-groups"),
+	RATINGS("ratings"),
 	ISRCS("isrcs");
 
 	final String value;

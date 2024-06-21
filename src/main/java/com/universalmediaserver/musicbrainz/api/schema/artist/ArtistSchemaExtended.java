@@ -18,6 +18,7 @@ package com.universalmediaserver.musicbrainz.api.schema.artist;
 
 import com.google.gson.annotations.SerializedName;
 import com.universalmediaserver.musicbrainz.api.schema.LifeSpanSchema;
+import com.universalmediaserver.musicbrainz.api.schema.RatingSchema;
 import com.universalmediaserver.musicbrainz.api.schema.area.AreaSchema;
 import java.util.List;
 
@@ -44,6 +45,8 @@ public class ArtistSchemaExtended extends ArtistSchema {
 	private String gender;
 	@SerializedName("gender-id")
 	private String genderId;
+	@SerializedName("rating")
+	private RatingSchema rating;
 
 	public LifeSpanSchema getLifeSpan() {
 		return lifeSpan;
@@ -107,6 +110,14 @@ public class ArtistSchemaExtended extends ArtistSchema {
 
 	public void setGenderId(String genderId) {
 		this.genderId = genderId;
+	}
+
+	public RatingSchema getRating() {
+		return rating;
+	}
+
+	public void setRating(RatingSchema rating) {
+		this.rating = rating;
 	}
 
 }

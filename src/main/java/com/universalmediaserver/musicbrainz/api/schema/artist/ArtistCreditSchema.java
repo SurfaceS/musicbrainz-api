@@ -30,7 +30,7 @@ public class ArtistCreditSchema {
 	@SerializedName("joinphrase")
 	private String joinphrase;
 	@SerializedName("artist")
-	private ArtistSchema artist;
+	private ArtistSchemaExtended artist;
 
 	public String getName() {
 		return name;
@@ -48,11 +48,11 @@ public class ArtistCreditSchema {
 		this.joinphrase = joinphrase;
 	}
 
-	public ArtistSchema getArtist() {
+	public ArtistSchemaExtended getArtist() {
 		return artist;
 	}
 
-	public void setArtist(ArtistSchema artist) {
+	public void setArtist(ArtistSchemaExtended artist) {
 		this.artist = artist;
 	}
 

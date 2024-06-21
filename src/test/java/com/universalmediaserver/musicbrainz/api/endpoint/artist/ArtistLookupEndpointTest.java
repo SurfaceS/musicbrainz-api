@@ -40,6 +40,7 @@ public class ArtistLookupEndpointTest extends BaseTestClass {
 		ArtistSchemaExtended result = musicBrainzAPIClient.artist()
 				.lookupFor(ARTIST_ID)
 				.include(ArtistLookupInclude.ALIASES)
+				.include(ArtistLookupInclude.RATINGS)
 				.getDetails();
 		assertParsedObject(result);
 	}

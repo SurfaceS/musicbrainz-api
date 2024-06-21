@@ -17,7 +17,7 @@
 package com.universalmediaserver.musicbrainz.api.endpoint.release_group;
 
 import com.universalmediaserver.musicbrainz.api.MusicBrainzAPIClient;
-import com.universalmediaserver.musicbrainz.api.schema.release_group.ReleaseGroupSchema;
+import com.universalmediaserver.musicbrainz.api.schema.release_group.ReleaseGroupLookupSchema;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -54,10 +54,10 @@ public class ReleaseGroupLookupEndpoint extends ReleaseGroupEndpoint {
 	 *
 	 * @return Release details.
 	 */
-	public ReleaseGroupSchema getDetails() {
+	public ReleaseGroupLookupSchema getDetails() {
 		Map<String, String> query = new HashMap<>();
 		addQueryEnums(query, QUERY_INCLUDE, included);
-		return musicBrainzAPIClient.get(RELEASE_GROUP_ENDPOINT + musicBrainzId, ReleaseGroupSchema.class, query);
+		return musicBrainzAPIClient.get(RELEASE_GROUP_ENDPOINT + musicBrainzId, ReleaseGroupLookupSchema.class, query);
 	}
 
 }

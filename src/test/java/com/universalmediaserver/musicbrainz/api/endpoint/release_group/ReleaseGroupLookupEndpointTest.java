@@ -41,6 +41,7 @@ public class ReleaseGroupLookupEndpointTest extends BaseTestClass {
 				.lookupFor(RELEASE_GROUP_ID)
 				.include(ReleaseGroupLookupInclude.ARTIST_CREDITS)
 				.include(ReleaseGroupLookupInclude.RECORDING)
+				.include(ReleaseGroupLookupInclude.RATINGS)
 				.getDetails();
 		assertParsedObject(result);
 	}

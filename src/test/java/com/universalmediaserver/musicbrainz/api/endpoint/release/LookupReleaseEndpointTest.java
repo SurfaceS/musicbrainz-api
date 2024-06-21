@@ -43,6 +43,8 @@ public class LookupReleaseEndpointTest extends BaseTestClass {
 				.include(ReleaseLookupInclude.LABELS)
 				.include(ReleaseLookupInclude.DISCIDS)
 				.include(ReleaseLookupInclude.RECORDING)
+				.include(ReleaseLookupInclude.RELEASE_GROUPS)
+				.include(ReleaseLookupInclude.RATINGS)
 				.getDetails();
 		assertParsedObject(result);
 	}

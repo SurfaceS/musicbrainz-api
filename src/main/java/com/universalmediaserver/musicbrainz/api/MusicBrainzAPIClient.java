@@ -18,6 +18,7 @@ package com.universalmediaserver.musicbrainz.api;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+import com.google.gson.JsonSyntaxException;
 import com.universalmediaserver.musicbrainz.api.endpoint.annotation.AnnotationEndpoint;
 import com.universalmediaserver.musicbrainz.api.endpoint.area.AreaEndpoint;
 import com.universalmediaserver.musicbrainz.api.endpoint.artist.ArtistEndpoint;
@@ -326,7 +327,14 @@ public class MusicBrainzAPIClient {
 			if (statusCode >= 200 && statusCode < 300) {
 				return GSON.fromJson(body, resultClass);
 			} else {
-				ErrorSchema status = GSON.fromJson(body, ErrorSchema.class);
+				ErrorSchema status;
+				try {
+					status = GSON.fromJson(body, ErrorSchema.class);
+				} catch (JsonSyntaxException ex) {
+					status = new ErrorSchema();
+					status.setError(String.valueOf(statusCode));
+					status.setHelp(body);
+				}
 				throw new MusicBrainzAPIException(statusCode + ": MusicBrainz error" + status.getError() + ": " + status.getHelp());
 			}
 		} catch (IOException ex) {

@@ -26,7 +26,9 @@ public enum ReleaseLookupInclude {
 	ARTIST_CREDITS("artist-credits"),
 	LABELS("labels"),
 	DISCIDS("discids"),
-	RECORDING("recordings");
+	RECORDING("recordings"),
+	RELEASE_GROUPS("release-groups"),
+	RATINGS("ratings");
 
 	final String value;
 

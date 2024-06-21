@@ -14,26 +14,27 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package com.universalmediaserver.musicbrainz.api.endpoint.artist;
+package com.universalmediaserver.musicbrainz.api.schema.release_group;
+
+import com.google.gson.annotations.SerializedName;
+import com.universalmediaserver.musicbrainz.api.schema.RatingSchema;
 
 /**
- * The supported data parameters to include for artist.
+ * Release Group Lookup Schema.
  *
  * @author SurfaceS
  */
-public enum ArtistLookupInclude {
+public class ReleaseGroupLookupSchema extends ReleaseGroupSchema {
 
-	ALIASES("aliases"),
-	RATINGS("ratings");
+	@SerializedName("rating")
+	private RatingSchema rating;
 
-	final String value;
-
-	ArtistLookupInclude(String value) {
-		this.value = value;
+	public RatingSchema getRating() {
+		return rating;
 	}
 
-	@Override
-	public String toString() {
-		return value;
+	public void setRating(RatingSchema rating) {
+		this.rating = rating;
 	}
+
 }

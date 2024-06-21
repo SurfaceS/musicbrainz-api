@@ -233,21 +233,21 @@ public class RecordingSearchEndpoint extends RecordingEndpoint {
 	}
 
 	/**
-	 * @param value (part of) the recording's name, or the name of a track
+	 * @param value (part of) the recording's title, or the title of a track
 	 * connected to this recording (diacritics are ignored)
 	 * @return
 	 */
-	public RecordingSearchEndpoint withName(String value) {
+	public RecordingSearchEndpoint withTitle(String value) {
 		this.recording = value;
 		return this;
 	}
 
 	/**
-	 * @param value (part of) the recording's name, or the name of a track
+	 * @param value (part of) the recording's title, or the title of a track
 	 * connected to this recording (with the specified diacritics)
 	 * @return
 	 */
-	public RecordingSearchEndpoint withAccentedName(String value) {
+	public RecordingSearchEndpoint withAccentedTitle(String value) {
 		this.recordingaccent = value;
 		return this;
 	}
@@ -262,10 +262,10 @@ public class RecordingSearchEndpoint extends RecordingEndpoint {
 	}
 
 	/**
-	 * @param value (part of) the name of any release including this recording
+	 * @param value (part of) the title of any release including this recording
 	 * @return
 	 */
-	public RecordingSearchEndpoint withReleaseName(String value) {
+	public RecordingSearchEndpoint withReleaseTitle(String value) {
 		this.release = value;
 		return this;
 	}

@@ -17,6 +17,7 @@
 package com.universalmediaserver.musicbrainz.api.schema.recording;
 
 import com.google.gson.annotations.SerializedName;
+import com.universalmediaserver.musicbrainz.api.schema.RatingSchema;
 import com.universalmediaserver.musicbrainz.api.schema.release.ReleaseSchemaExtended;
 import java.util.List;
 
@@ -31,6 +32,8 @@ public class RecordingLookupSchema extends RecordingBaseSchema {
 	private List<ReleaseSchemaExtended> releases;
 	@SerializedName("isrcs")
 	private List<String> isrcs;
+	@SerializedName("rating")
+	private RatingSchema rating;
 
 	public List<ReleaseSchemaExtended> getReleases() {
 		return releases;
@@ -46,6 +49,14 @@ public class RecordingLookupSchema extends RecordingBaseSchema {
 
 	public void setIsrcs(List<String> isrcs) {
 		this.isrcs = isrcs;
+	}
+
+	public RatingSchema getRating() {
+		return rating;
+	}
+
+	public void setRating(RatingSchema rating) {
+		this.rating = rating;
 	}
 
 }

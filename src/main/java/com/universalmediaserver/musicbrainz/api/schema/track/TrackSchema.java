@@ -18,7 +18,7 @@ package com.universalmediaserver.musicbrainz.api.schema.track;
 
 import com.google.gson.annotations.SerializedName;
 import com.universalmediaserver.musicbrainz.api.schema.artist.ArtistCreditSchema;
-import com.universalmediaserver.musicbrainz.api.schema.recording.RecordingBaseSchema;
+import com.universalmediaserver.musicbrainz.api.schema.recording.RecordingLookupSchema;
 import java.util.List;
 
 /**
@@ -31,7 +31,7 @@ public class TrackSchema extends TrackBaseSchema {
 	@SerializedName("position")
 	private Long position;
 	@SerializedName("recording")
-	private RecordingBaseSchema recording;
+	private RecordingLookupSchema recording;
 	@SerializedName("artist-credit")
 	private List<ArtistCreditSchema> artistCredit;
 
@@ -43,11 +43,11 @@ public class TrackSchema extends TrackBaseSchema {
 		this.position = position;
 	}
 
-	public RecordingBaseSchema getRecording() {
+	public RecordingLookupSchema getRecording() {
 		return recording;
 	}
 
-	public void setRecording(RecordingBaseSchema recording) {
+	public void setRecording(RecordingLookupSchema recording) {
 		this.recording = recording;
 	}
 

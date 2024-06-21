@@ -42,6 +42,8 @@ public class RecordingLookupEndpointTest extends BaseTestClass {
 				.include(RecordingLookupInclude.ARTIST_CREDIT)
 				.include(RecordingLookupInclude.RELEASES)
 				.include(RecordingLookupInclude.ISRCS)
+				.include(RecordingLookupInclude.RELEASE_GROUPS)
+				.include(RecordingLookupInclude.RATINGS)
 				.getDetails();
 		assertParsedObject(result);
 	}

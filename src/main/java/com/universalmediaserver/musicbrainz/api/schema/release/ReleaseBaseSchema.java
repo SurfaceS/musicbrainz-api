@@ -19,7 +19,7 @@ package com.universalmediaserver.musicbrainz.api.schema.release;
 import com.google.gson.annotations.SerializedName;
 import com.universalmediaserver.musicbrainz.api.schema.artist.ArtistCreditSchema;
 import com.universalmediaserver.musicbrainz.api.schema.medium.MediumSchema;
-import com.universalmediaserver.musicbrainz.api.schema.release_group.ReleaseGroupBaseSchema;
+import com.universalmediaserver.musicbrainz.api.schema.release_group.ReleaseGroupLookupSchema;
 import java.util.List;
 
 /**
@@ -42,7 +42,7 @@ public class ReleaseBaseSchema {
 	@SerializedName("artist-credit")
 	private List<ArtistCreditSchema> artistCredit;
 	@SerializedName("release-group")
-	private ReleaseGroupBaseSchema releaseGroup;
+	private ReleaseGroupLookupSchema releaseGroup;
 	@SerializedName("date")
 	private String date;
 	@SerializedName("country")
@@ -104,11 +104,11 @@ public class ReleaseBaseSchema {
 		this.artistCredit = artistCredit;
 	}
 
-	public ReleaseGroupBaseSchema getReleaseGroup() {
+	public ReleaseGroupLookupSchema getReleaseGroup() {
 		return releaseGroup;
 	}
 
-	public void setReleaseGroup(ReleaseGroupBaseSchema releaseGroup) {
+	public void setReleaseGroup(ReleaseGroupLookupSchema releaseGroup) {
 		this.releaseGroup = releaseGroup;
 	}
 

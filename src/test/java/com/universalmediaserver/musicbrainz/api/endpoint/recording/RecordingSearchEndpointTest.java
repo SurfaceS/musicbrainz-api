@@ -37,7 +37,7 @@ public class RecordingSearchEndpointTest extends BaseTestClass {
 	@Test
 	public void testGetResults() {
 		System.out.println("RecordingSearchEndpoint getResults");
-		RecordingSearchResultsSchema result = musicBrainzAPIClient.recording().search().withName(TITLE).getResults();
+		RecordingSearchResultsSchema result = musicBrainzAPIClient.recording().search().withTitle(TITLE).getResults();
 		assertParsedObject(result);
 	}
 
